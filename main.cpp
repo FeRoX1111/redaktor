@@ -43,3 +43,17 @@ int main() {
             table[row][col] = newValue;
             cout << "Ячейка [" << row << "][" << col << "] обновлена.\n";
         }
+        else {
+            cout << "Ошибка: неверные координаты.\n";
+        }
+
+        cout << "Продолжить редактирование? (y/n): ";
+        cin >> choice;
+
+    } while (choice == 'y' || choice == 'Y');
+
+    cout << "Финальная таблица:\n";
+    printTable(table);
+
+    return 0;
+}
