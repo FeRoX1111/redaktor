@@ -28,3 +28,18 @@ int main() {
     int row, col;
     string newValue;
     char choice;
+    
+    do {
+        printTable(table);
+
+        cout << "\nВведите номер строки (0-" << table.size() - 1 << "): ";
+        cin >> row;
+        cout << "Введите номер столбца (0-" << table[0].size() - 1 << "): ";
+        cin >> col;
+
+        if (row >= 0 && row < table.size() && col >= 0 && col < table[0].size()) {
+            cout << "Введите новое значение: ";
+            cin >> newValue;
+            table[row][col] = newValue;
+            cout << "Ячейка [" << row << "][" << col << "] обновлена.\n";
+        }
